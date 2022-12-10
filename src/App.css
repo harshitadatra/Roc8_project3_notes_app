@@ -1,51 +1,267 @@
-.App {
-  text-align: center;
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  background-color: #536DFE;
+  padding: 1rem;
+  font-size: 1.2rem;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-button {
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem 1rem;
+
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.App-header {
-  background-color: #22201c;
-  min-height: 100vh;
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.description-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin-top: auto;
+  gap: 3rem;
+}
+.notes-card-display
+{
+  display:flex ;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+
+}
+.description {
+  font-size: 2rem;
+
+}
+
+.sign-up-button {
+  background-color: #536DFE;
+  border: 2px solid white;
+  border-radius: 0.5rem;
   color: white;
+  padding: 1rem;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.login-link {
+  margin-left: auto;
+  margin-right: auto;
+  color: #536DFE;
+  font-size: 1.5rem;
 }
 
-.brand-title {
-  font-size: 3rem;
-  color: #d9d9d9;
+.notes-card-container {
+  /* background-color: lightblue; */
+  height: fit-content;
+  width: 20%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+
+}
+.notes-page-container{
+  margin-top: 1rem;
 }
 
-.brand-title span {
-  color: #ffde59;
+.notes-title {
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+
 }
 
-.brand-description {
-  font-size: 1.4rem;
+.notes-priority {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
 }
 
-.links {
+.notes-content {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.notes-label {
+  background-color: #536DFE;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 300;
+  width: fit-content;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.notes-features-container {
   display: flex;
+  gap: 0.2rem;
 }
 
-.links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
+.login-container{
+   
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     height: fit-content;
+     width: 40%;
+     margin: auto;
+     margin-top: 10rem;
+   
+}
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+  width: 40%;
+  margin: auto;
+  margin-top: 7rem;
+}
+
+.login-header,
+.sign-up-header {
+  color: #536DFE;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.email-input,
+.password-input,
+.first-name-input,
+.last-name-input {
+  padding: 0.5rem;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-container-button,
+.signup-container-button {
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #536DFE;
+  width: 50%;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.login-container-test {
+  border: 2px solid #536DFE;
+  border-radius: 0.5rem;
+  color: #536DFE;
+  width: 50%;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  cursor: pointer;
+
+}
+
+.signup-message {
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
+
+.notes-page-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+.aside-container
+{
+  display: flex;
+  gap:1rem;
+  flex-direction: column;
+  margin-left:1rem;
+  
+ 
+  margin-top:1rem;
+  font-size:1.5rem
+}
+.side-bar-navigate
+{
+  text-decoration: none;
+  color:#536DFE;
+  font-weight: bold;
+}
+.take-a-note-button
+{
+  
+  padding:0.5rem;
+  background-color: #536DFE;
+  border-radius: 0.5rem;
+  color:white;
+  border: none;
+}
+.notes-features-container
+{
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+.input-text
+{
+  padding: 0.5rem 1.3rem;
+ 
+}
+.new-note-details
+{
+  display: flex;
+  flex-direction:column;
+  gap:1rem;
+  width: 80%;
+  margin-top: 1rem;
+}
+.note-details
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-note-content
+{
+  height: 6rem;
+}
+.addnotes-buttons
+{
+  display: flex;
+  gap:1rem;
+  justify-content: flex-end;
+}
+.cancel-button
+{
+  padding:0.5rem 1rem;
+  border:none;
+  border-radius:0.5rem;
+  background-color: #AF0F04;
+  color: white;
+  
+}
+.add-note-button{
+
+  padding:0.5rem 1rem;
+  border:none;
+  border-radius:0.5rem;
+  background-color: #536DFE;
+  color: white;
 }
