@@ -6,7 +6,7 @@ import {useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 export const Login = () => {
     const [userDetail,setUserDetail] = useState({email:"",password:""});
-    const {user,setUser} = useAuth();
+    const {setUser} = useAuth();
     const navigate = useNavigate();
     const changeHandler = (e) =>
     {

@@ -18,7 +18,7 @@ export const AddNote = () => {
     const [showForm,setShowCard] = useState(false);
     const [note,setNote]= useState(initialData);
     const {user} = useAuth();
-    const {noteData,setNoteData} = useCart();
+    const {setNoteData} = useCart();
     // console.log(user);
     // console.log(user.token);
 

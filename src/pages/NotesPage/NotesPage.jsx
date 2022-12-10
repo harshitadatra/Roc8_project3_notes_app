@@ -3,7 +3,6 @@ import { AddNote } from '../../components/AddNote/AddNote';
 import { Navbar } from '../../components/Navbar/Navbar';
 import { NotesCard } from '../../components/NotesCard/NotesCard';
 import { useCart } from '../../context/notes-context';
-import { Link } from 'react-router-dom';
 import { Sidebar } from '../../components/Sidebar/Sidebar';
  export const NotesPage = () => {
   const {noteData} = useCart();

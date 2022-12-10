@@ -8,7 +8,7 @@ import axios from "axios";
 export const ArchiveCard = ({item}) => {
   const {user} =useAuth();
  const { setArchiveData } = useArchive();
- const { noteData, setNoteData } = useCart();
+ const {  setNoteData } = useCart();
  const restoreArchive = async () => {
     try {
      console.log("dfd");

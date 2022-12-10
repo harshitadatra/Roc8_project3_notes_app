@@ -1,15 +1,13 @@
 import React from "react";
 import { useAuth } from "../../context/auth-context";
 import { useDelete } from "../../context/delete-context";
-import { useCart } from "../../context/notes-context";
 
 import axios from "axios";
 
 
 export const DeleteCard = ({ item }) => {
-    const { deleteData, setDeleteData, deleteArray } = useDelete();
+    const {  deleteArray } = useDelete();
     const { user } = useAuth();
-    const { noteData, setNoteData } = useCart();
 
 
   const deleteNote = async () => {
@@ -26,7 +24,7 @@ export const DeleteCard = ({ item }) => {
       );
       console.log(res);
       console.log(item);
-      const itemValue =item ;
+     
   console.log(deleteArray);
 
      deleteArray.pop()

@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, {  useState } from 'react';
 import {useAuth} from "../../context/auth-context";
 import { useArchive } from '../../context/archive-context';
 import {useCart} from "../../context/notes-context";
@@ -7,9 +7,9 @@ import axios from "axios"
 export const NotesCard = ({item}) => {
     const {user} = useAuth();
     const {setArchiveData} = useArchive();
-    const {deleteData,setDeleteData,deleteArray} = useDelete();
+    const {deleteArray} = useDelete();
 
-    const { noteData, setNoteData } = useCart();
+    const { setNoteData } = useCart();
     const [isEdit,setEdit] = useState(false);
     const initialData = {
       title: item.title,
