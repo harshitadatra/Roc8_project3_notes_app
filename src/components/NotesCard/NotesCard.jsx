@@ -4,13 +4,14 @@ import { useArchive } from '../../context/archive-context';
 import {useCart} from "../../context/notes-context";
 import { useDelete } from '../../context/delete-context';
 import axios from "axios"
+import { useEdit } from '../../context/edit-context';
 export const NotesCard = ({item}) => {
     const {user} = useAuth();
     const {setArchiveData} = useArchive();
     const {deleteArray} = useDelete();
-
+    console.log("item notes card",item)
     const { setNoteData } = useCart();
-    const [isEdit,setEdit] = useState(false);
+    const {isEdit, setEdit} = useEdit();
     const initialData = {
       title: item.title,
       label: item.label,
@@ -86,95 +87,42 @@ const deleteNote = async () => {
     // Toast("Couldn't Delete Note,Try again later", "error");
   }
 };
+
+    const setToLocalStorage = (id, title, label, notes) => {
+      localStorage.setItem("id", id);
+
+      localStorage.setItem("title", title);
+      localStorage.setItem("label", label);
+      localStorage.setItem("notes", notes);
+    };
 const editHandler = () => 
 {
   setEdit(!isEdit);
+   setToLocalStorage(item._id,item.title, item.label, item.notes);
 }
 
- const editNote = async () => {
-  console.log(note);
+//  const editNote = async () => {
+//   console.log(note);
 
-  try {
+//   try {
 
-    const res = await axios.post(
-      `/api/notes/${item._id}`,
-      {note},
-      {
-        headers: { authorization: user.token },
-      }
-    );
-    console.log(res);
-     setNoteData({ notes: res.data.notes });
-  } catch (error) {
-    // Toast("Couldn't Update Note", "error");
-    console.log(error);
-  }
-};
+//     const res = await axios.post(
+//       `/api/notes/${item._id}`,
+//       {note},
+//       {
+//         headers: { authorization: user.token },
+//       }
+//     );
+//     console.log(res);
+//      setNoteData({ notes: res.data.notes });
+//   } catch (error) {
+//     // Toast("Couldn't Update Note", "error");
+//     console.log(error);
+//   }
+// };
 
   return (
     <>
-      {isEdit ? (
-        <div class="new-note-details">
-          <div className="note-details">
-            <label htmlFor="title">Title*</label>
-
-            <input
-              type="text"
-              name="title"
-              className="input-text"
-              id="title"
-              placeholder="Enter Title"
-              onChange={(e) => handleChange(e)}
-              value={note.title}
-              required
-            />
-            <label htmlFor="label">label*</label>
-            <select
-              onChange={(e) => handleChange(e)}
-              name="label"
-              id="label"
-              className="input-text"
-              required
-              value={note.label}
-            >
-              <option value="Work">Work</option>
-              <option value="Home">Home</option>
-              <option value="Chores">Chores</option>
-              <option value="Exercise">Exercise</option>
-            </select>
-            <label htmlFor="priority">Priority*</label>
-            <select
-              name="priority"
-              id="priority"
-              className="input-text"
-              value={note.priority}
-              required
-              onChange={(e) => handleChange(e)}
-            >
-              <option value="High">High</option>
-              <option value="Medium">Medium</option>
-              <option value="Low">Low</option>
-            </select>
-          </div>
-          <div className="add-notes-content"></div>
-          <input
-            name="notes"
-            onChange={(e) => handleChange(e)}
-            className="input-note-content"
-            value={note.notes}
-            required
-          />
-          <div className="addnotes-buttons">
-            <button className="cancel-button"> Cancel </button>
-            <button className="add-note-button" onClick={editNote}>
-              {" "}
-              edit Note
-            </button>
-          </div>
-        </div>
-      ) : (
-        <></>
-      )}
       
           <div className="notes-card-container">
             <div className="notes-title">{item.title}</div>
