@@ -21,7 +21,7 @@ export const NotesCard = ({item}) => {
       bgColor: "off-white",
     };
 
-    const [note,setNote]= useState(initialData);
+    // const [note,setNote]= useState(initialData);
       
        
       //  const handleChange = (e) => {

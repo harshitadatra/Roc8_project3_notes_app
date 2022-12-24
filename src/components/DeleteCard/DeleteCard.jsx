@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 export const DeleteCard = ({ item }) => {
-    const {  deleteArray } = useDelete();
+    // const {  deleteArray } = useDelete();
     const { user } = useAuth();
 
 
