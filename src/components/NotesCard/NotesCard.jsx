@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React from 'react';
 import {useAuth} from "../../context/auth-context";
 import { useArchive } from '../../context/archive-context';
 import {useCart} from "../../context/notes-context";
@@ -12,14 +12,14 @@ export const NotesCard = ({item}) => {
     console.log("item notes card",item)
     const { setNoteData } = useCart();
     const {isEdit, setEdit} = useEdit();
-    const initialData = {
-      title: item.title,
-      label: item.label,
-      notes: item.notes,
-      priority: item.priority,
-      trash: [],
-      bgColor: "off-white",
-    };
+    // const initialData = {
+    //   title: item.title,
+    //   label: item.label,
+    //   notes: item.notes,
+    //   priority: item.priority,
+    //   trash: [],
+    //   bgColor: "off-white",
+    // };
 
     // const [note,setNote]= useState(initialData);
       

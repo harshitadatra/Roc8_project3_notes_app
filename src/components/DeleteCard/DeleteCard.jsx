@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth } from "../../context/auth-context";
-import { useDelete } from "../../context/delete-context";
+// import { useDelete } from "../../context/delete-context";
 
 import axios from "axios";
 
