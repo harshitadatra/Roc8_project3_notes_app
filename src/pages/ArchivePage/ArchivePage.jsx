@@ -6,7 +6,6 @@ import { Sidebar } from '../../components/Sidebar/Sidebar';
 
 export const ArchivePage = () => {
     const {archiveData} = useArchive();
-    console.log(archiveData)
   return (
     <>
       <Navbar />

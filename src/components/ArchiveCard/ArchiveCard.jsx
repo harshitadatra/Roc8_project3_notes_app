@@ -11,7 +11,6 @@ export const ArchiveCard = ({item}) => {
  const {  setNoteData } = useCart();
  const restoreArchive = async () => {
     try {
-     console.log("dfd");
      const res = await axios.post(
        `/api/archives/restore/${item._id}`,
        {},
@@ -19,7 +18,6 @@ export const ArchiveCard = ({item}) => {
          headers: {authorization:user.token },
        }
      );
-     console.log(res);
      setArchiveData({ archive: res.data.archives });
      setNoteData({ notes: res.data.notes });
    } catch (error) {
@@ -31,7 +29,6 @@ export const ArchiveCard = ({item}) => {
      const res = await axios.delete(`/api/archives/delete/${item._id}`, {
        headers: { authorization: user.token },
      });
-     console.log(res);
      setArchiveData({ archive: res.data.archives });
 
      

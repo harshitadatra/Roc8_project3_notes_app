@@ -20,10 +20,8 @@ export const Signup = () => {
     }));
   };
   const signUpClickHandler = async () => {
-    console.log(userSignUp)
     try {
       const signUpData = await axios.post("/api/auth/signup", userSignUp);
-      console.log(signUpData);
       setUser({
         users: signUpData.data.createdUser,
         token: signUpData.data.encodedToken,

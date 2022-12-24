@@ -30,8 +30,6 @@ export const EditNote = () => {
 //   const [note, setNote] = useState(initialData);
   const { user } = useAuth();
   const { setNoteData } = useCart();
-  // console.log(user);
-  // console.log(user.token);
 
 //   const showHandler = () => {
 //     setShowCard(!showForm);
@@ -41,7 +39,6 @@ export const EditNote = () => {
 //     const value = e.target.value;
 //     setNote({ ...note, [name]: value });
 //   };
-//   // console.log(note);
 
   const editNote = async () => {
     const note = {
@@ -52,7 +49,6 @@ export const EditNote = () => {
       isEditing: false,
       bgColor: "off-white",
     };
-    console.log("line 54",note);
      setEdit(!isEdit);
     try {
       const res = await axios.post(
@@ -62,11 +58,9 @@ export const EditNote = () => {
           headers: { authorization: user.token },
         }
       );
-      console.log(res);
       setNoteData({ notes: res.data.notes });
     } catch (error) {
       // Toast("Couldn't Update Note", "error");
-      console.log(error);
     }
   };
   const cancelHandler = () => 

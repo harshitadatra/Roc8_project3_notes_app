@@ -23,7 +23,6 @@ export const Login = () => {
              ? { email: "abc@gmail.com", password: "abc123" }
              : userDetail
          );
-        //  console.log(response);
          setUser({
            users: response.data.foundUser,
            token: response.data.encodedToken,
@@ -31,12 +30,10 @@ export const Login = () => {
 
          navigate("/notes");
 
-        //  console.log(response.data.foundUser);
        } catch (error) {
          console.log(error.response);
        }
      };
-        //  console.log(user);
 
   
 

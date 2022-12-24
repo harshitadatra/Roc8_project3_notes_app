@@ -9,7 +9,6 @@ export const NotesCard = ({item}) => {
     const {user} = useAuth();
     const {setArchiveData} = useArchive();
     const {deleteArray} = useDelete();
-    console.log("item notes card",item)
     const { setNoteData } = useCart();
     const {isEdit, setEdit} = useEdit();
     // const initialData = {
@@ -27,17 +26,13 @@ export const NotesCard = ({item}) => {
       //  const handleChange = (e) => {
       //    const name = e.target.name;
       //    const value = e.target.value;
-      //    console.log(name);
-      //    console.log(value);
       //    setNote({ ...note, [name]: value });
       //  };
 
-    // console.log(note);
     
     
     const addToArchive = async () => {
   try {
-        console.log("archive");
 
     const res = await axios.post(
       `api/notes/archives/${item._id}`,
@@ -50,7 +45,6 @@ export const NotesCard = ({item}) => {
     setNoteData({ notes: res.data.notes });
 
 
-    console.log(res);
   
   } catch (error) {
     // Toast("Couldn't Add to Archive ", "error");
@@ -60,7 +54,6 @@ export const NotesCard = ({item}) => {
 
 
 const deleteNote = async () => {
-  console.log("dleere")
 
   try {
        
@@ -74,8 +67,6 @@ const deleteNote = async () => {
         headers: { authorization: user.token },
       }
     );
-    console.log("del",res);
-    console.log("delnote",item);
      
          setNoteData({ notes: res.data.notes });
          
@@ -102,7 +93,6 @@ const editHandler = () =>
 }
 
 //  const editNote = async () => {
-//   console.log(note);
 
 //   try {
 
@@ -113,11 +103,9 @@ const editHandler = () =>
 //         headers: { authorization: user.token },
 //       }
 //     );
-//     console.log(res);
 //      setNoteData({ notes: res.data.notes });
 //   } catch (error) {
 //     // Toast("Couldn't Update Note", "error");
-//     console.log(error);
 //   }
 // };
 

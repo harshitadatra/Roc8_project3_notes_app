@@ -8,7 +8,6 @@ import { EditNote } from '../../components/EditNote/EditNote';
 import { useEdit } from '../../context/edit-context';
  export const NotesPage = () => {
   const {noteData} = useCart();
-  console.log(noteData.notes);
    const { isEdit } =useEdit()
 
   return (

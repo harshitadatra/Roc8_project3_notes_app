@@ -11,7 +11,6 @@ export const DeleteCard = ({ item }) => {
 
 
   const deleteNote = async () => {
-    console.log("dleere");
 
     try {
       const res = await axios.delete(
@@ -22,8 +21,6 @@ export const DeleteCard = ({ item }) => {
           headers: { authorization: user.token },
         }
       );
-      console.log("res",res);
-      console.log("item",item);
   
      
  

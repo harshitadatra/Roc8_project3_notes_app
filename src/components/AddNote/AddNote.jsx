@@ -19,8 +19,6 @@ export const AddNote = () => {
     const [note,setNote]= useState(initialData);
     const {user} = useAuth();
     const {setNoteData} = useCart();
-    // console.log(user);
-    // console.log(user.token);
 
 
     const showHandler = () => 
@@ -32,7 +30,6 @@ export const AddNote = () => {
       const value = e.target.value;
       setNote({ ...note, [name]: value });
     };
-    // console.log(note);
 
     const addNoteHandler =  async () => {
         setShowCard(!showForm);
@@ -46,7 +43,6 @@ export const AddNote = () => {
           }
         );
          setNoteData({notes:res.data.notes})
-        // console.log(res);
         
       } catch (error) {
         // Toast("Something went Wrong", "error");
