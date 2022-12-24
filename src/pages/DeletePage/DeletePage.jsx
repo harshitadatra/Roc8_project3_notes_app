@@ -13,7 +13,7 @@ export const DeletePage = () => {
       <Navbar />
       <div class="notes-page-container">
         <Sidebar />
-       <main className="notes-container">
+       <main className="delete-card-display">
           {deleteArray.map((item) => (
             <DeleteCard key={item._id} item={item} />
           ))}    
