@@ -265,3 +265,8 @@
   background-color: #536DFE;
   color: white;
 }
+.delete-card-display
+{
+  display: flex;
+  flex-wrap: wrap;
+}
