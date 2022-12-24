@@ -22,12 +22,12 @@ export const DeleteCard = ({ item }) => {
           headers: { authorization: user.token },
         }
       );
-      console.log(res);
-      console.log(item);
+      console.log("res",res);
+      console.log("item",item);
+      deleteArray = deleteArray.filter( i => i._id!=item._id );
+      console.log(deleteArray);
      
-  console.log(deleteArray);
-
-     deleteArray.pop()
+ 
 
 
   
@@ -45,7 +45,7 @@ export const DeleteCard = ({ item }) => {
         <div class="notes-content">{item.notes}</div>
         <div class="notes-label">{item.label}</div>
         <div class="notes-features-container">
-          <i class="fa-solid fa-box-archive"></i>
+         
           <i onClick={deleteNote}class="fa-solid fa-trash"></i>
         </div>
       </div>
