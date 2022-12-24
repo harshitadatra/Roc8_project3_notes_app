@@ -24,8 +24,7 @@ export const DeleteCard = ({ item }) => {
       );
       console.log("res",res);
       console.log("item",item);
-      deleteArray = deleteArray.filter( i => i._id!=item._id );
-      console.log(deleteArray);
+  
      
  
 
