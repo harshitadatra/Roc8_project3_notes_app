@@ -15,9 +15,14 @@ export const Login = () => {
         setUserDetail((prev) => ({...prev,[name]: value}))
 
     }
-     const loginHandler = async () => {
+     const loginHandler = async (isTestUser) => {
        try {
-         const response = await axios.post("/api/auth/login", userDetail);
+         const response = await axios.post(
+           "/api/auth/login",
+           isTestUser
+             ? { email: "abc@gmail.com", password: "abc123" }
+             : userDetail
+         );
         //  console.log(response);
          setUser({
            users: response.data.foundUser,
@@ -56,11 +61,11 @@ export const Login = () => {
           placeholder="enter you password"
           onChange={(e) => changeHandler(e)}
         />
-        <button className="login-container-button" onClick={loginHandler}>
+        <button className="login-container-button" onClick={()=> loginHandler(false)}>
           Login
         </button>
 
-        <button className="login-container-test">
+        <button onClick={() => loginHandler(true)} className="login-container-test">
           Login with test credentials
         </button>
         <div className="signup-message">
