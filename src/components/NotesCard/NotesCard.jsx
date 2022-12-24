@@ -24,13 +24,13 @@ export const NotesCard = ({item}) => {
     const [note,setNote]= useState(initialData);
       
        
-       const handleChange = (e) => {
-         const name = e.target.name;
-         const value = e.target.value;
-         console.log(name);
-         console.log(value);
-         setNote({ ...note, [name]: value });
-       };
+      //  const handleChange = (e) => {
+      //    const name = e.target.name;
+      //    const value = e.target.value;
+      //    console.log(name);
+      //    console.log(value);
+      //    setNote({ ...note, [name]: value });
+      //  };
 
     // console.log(note);
     

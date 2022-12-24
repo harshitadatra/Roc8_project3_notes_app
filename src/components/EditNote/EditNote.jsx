@@ -26,7 +26,7 @@ export const EditNote = () => {
  }, []);
 
 
-  const [showForm, setShowCard] = useState(false);
+  // const [showForm, setShowCard] = useState(false);
 //   const [note, setNote] = useState(initialData);
   const { user } = useAuth();
   const { setNoteData } = useCart();

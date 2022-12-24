@@ -9,7 +9,7 @@ import { useEdit } from '../../context/edit-context';
  export const NotesPage = () => {
   const {noteData} = useCart();
   console.log(noteData.notes);
-   const { isEdit, setEdit } =useEdit()
+   const { isEdit } =useEdit()
 
   return (
     <>

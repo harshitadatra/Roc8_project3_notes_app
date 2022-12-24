@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/auth-context';
-import { useCart } from '../../context/notes-context';
+// import { useCart } from '../../context/notes-context';
 
 export const Navbar = () => {
   const {user,setUser} = useAuth();
