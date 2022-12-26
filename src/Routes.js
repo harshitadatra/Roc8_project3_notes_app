@@ -10,17 +10,17 @@ import { DeletePage } from './pages/DeletePage/DeletePage';
 export const RouterPath = () => {
   return (
     <div>
+     
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path ="/notes" element = {<NotesPage/>}/>
-        <Route path="/archive" element= {<ArchivePage/>}/>
-        <Route path="/signup" element={<Signup/>}/>
-        <Route path="/trash" element={<DeletePage/>}/>
-        
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/notes" element={<NotesPage />} />
+        <Route path="/archive" element={<ArchivePage />} />
+        <Route path="/trash" element={<DeletePage />} />
       </Routes>
     </div>
-  )
+  );
 }
 
 
