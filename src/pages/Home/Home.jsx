@@ -1,7 +1,8 @@
 import React from 'react';
 import sourceImg from "../../assets/img1.png";
 import { Navbar } from '../../components/Navbar/Navbar';
-import "../../App.css"
+import "../../App.css";
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return (
@@ -16,8 +17,12 @@ export const Home = () => {
             Dump all you notes so that in keep notes . so that you dont forget
             about it
           </div>
-          <button className ="sign-up-button"> Sign-up</button>
-          <div className ="login-link">Already have an account? login</div>
+          <Link to="/signup" className="sign-up-button">
+            Sign-up
+          </Link>
+          <Link to="/login" className="login-link">
+            Already have an account? Login
+          </Link>
         </div>
       </div>
     </>
