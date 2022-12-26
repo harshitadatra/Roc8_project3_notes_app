@@ -21,6 +21,7 @@ export const DeleteCard = ({ item }) => {
           headers: { authorization: user.token },
         }
       );
+      console.log(res)
   
      
  
