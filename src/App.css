@@ -57,6 +57,9 @@
   width: 30%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  text-decoration: none;
+
 }
 
 .login-link {
@@ -64,6 +67,7 @@
   margin-right: auto;
   color: #536DFE;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .notes-card-container {
